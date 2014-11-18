@@ -45,9 +45,16 @@ body {
   background-color: #1abc9c;
   color: #ffffff;
   font-family: Lato, Helvetica, Arial, sans-serif;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .title-page .difficulties button:focus {
   outline: none;
+}
+.title-page .difficulties button:hover {
+  background-color: #28e1bd;
 }
 .title-page .difficulties .difficulty-description {
   margin: 2px 0 10px;
