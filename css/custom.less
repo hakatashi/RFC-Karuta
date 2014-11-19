@@ -30,6 +30,16 @@
 	transform: translateY(-50%);
 }
 
+// https://github.com/seven-phases-max/less.curious/blob/master/src/for.less
+.for(@i, @n) {.-each(@i)}
+.for(@n)     when (isnumber(@n)) {.for(1, @n)}
+.for(@i, @n) when not (@i = @n)  {
+    .for((@i + (@n - @i) / abs(@n - @i)), @n);
+}
+.for(@array)   when (default()) {.for-impl_(length(@array))}
+.for-impl_(@i) when (@i > 1)    {.for-impl_((@i - 1))}
+.for-impl_(@i) when (@i > 0)    {.-each(extract(@array, @i))}
+
 html, body {
 	width: 100%;
 	height: 100%;
@@ -123,6 +133,7 @@ html, body {
 		.card-wrap {
 			width: 100%;
 			height: 12.5%;
+			display: block;
 
 			.box-sizing(border-box);
 			padding: 5px;
@@ -131,7 +142,7 @@ html, body {
 		.card {
 			width: 100%;
 			height: 100%;
-			border-radius: 4px;
+			border-radius: 5px;
 			background-color: gray;
 			position: relative;
 
@@ -139,11 +150,10 @@ html, body {
 				display: block;
 				width: 100%;
 
-				position: absolute;
-				top: 20%;
+				.vertical-center;
 
 				text-align: center;
-				font-size: 3vh;
+				font-size: 2.6vh;
 			}
 
 			.card-status {
@@ -151,11 +161,25 @@ html, body {
 			}
 		}
 
-		@PSColor: #8E44AD;
+		@card-colors:
+			ps #27AE60,
+			ds #1ABC9C,
+			std #2980B9,
+			info #8E44AD,
+			exp #C0392B,
+			bcp #F39C12,
+			hist #D35400,
+			unk #2C3E50;
 
-		.card-ps .card {
-			background-color: @PSColor;
-			color: lighten(spin(@PSColor, 30), 30);
+		.for(@card-colors); .-each(@card-color) {
+			@name: extract(@card-color, 1);
+			@color: extract(@card-color, 2);
+			@pair: lighten(spin(@color, 30), 50);
+
+			.card-@{name} .card {
+				background-color: @color;
+				color: @pair;
+			}
 		}
 	}
 }
