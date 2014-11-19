@@ -11,6 +11,17 @@
 	transition: @transition;
 }
 
+.box-sizing(@box-sizing) {
+	-webkit-box-sizing: @box-sizing;
+	-moz-box-sizing: @box-sizing;
+	box-sizing: @box-sizing;
+}
+
+.bare {
+	margin: 0;
+	padding: 0;
+}
+
 html, body {
 	width: 100%;
 	height: 100%;
@@ -86,6 +97,34 @@ html, body {
 		.difficulty-description {
 			margin: 2px 0 10px;
 			text-align: center;
+		}
+	}
+}
+
+.game-page {
+	.game-text {
+		width: 100%;
+		height: 30%;
+		.bare;
+	}
+	.game-cards {
+		width: 100%;
+		height: 70%;
+		.bare;
+
+		.card-wrap {
+			width: 100%;
+			height: 12.5%;
+
+			.box-sizing(border-box);
+			padding: 5px;
+		}
+
+		.card {
+			width: 100%;
+			height: 100%;
+			border-radius: 4px;
+			background-color: gray;
 		}
 	}
 }
