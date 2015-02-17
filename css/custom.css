@@ -117,32 +117,88 @@ body {
 .game-page .game-cards .card-ps .card {
   background-color: #27ae60;
   color: #ddf7f5;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.game-page .game-cards .card-ps .card:hover {
+  background-color: #36d278;
 }
 .game-page .game-cards .card-ds .card {
   background-color: #1abc9c;
   color: #dbf1fa;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.game-page .game-cards .card-ds .card:hover {
+  background-color: #28e1bd;
 }
 .game-page .game-cards .card-std .card {
   background-color: #2980b9;
   color: #e7e9fa;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.game-page .game-cards .card-std .card:hover {
+  background-color: #409ad5;
 }
 .game-page .game-cards .card-info .card {
   background-color: #8e44ad;
   color: #fbf5fa;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.game-page .game-cards .card-info .card:hover {
+  background-color: #a563c1;
 }
 .game-page .game-cards .card-exp .card {
   background-color: #c0392b;
   color: #fbf6ef;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.game-page .game-cards .card-exp .card:hover {
+  background-color: #d65548;
 }
 .game-page .game-cards .card-bcp .card {
   background-color: #f39c12;
   color: #ffffff;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.game-page .game-cards .card-bcp .card:hover {
+  background-color: #f5b043;
 }
 .game-page .game-cards .card-hist .card {
   background-color: #d35400;
   color: #fffbd3;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.game-page .game-cards .card-hist .card:hover {
+  background-color: #ff6a07;
 }
 .game-page .game-cards .card-unk .card {
   background-color: #2c3e50;
   color: #aaaad1;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.game-page .game-cards .card-unk .card:hover {
+  background-color: #3e5771;
 }
